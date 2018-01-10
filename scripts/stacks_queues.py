@@ -209,7 +209,7 @@ def find_shortest(source_x, source_y ,dest_x, dest_y):
     
     while (queue != []):
         
-        curr = queue.pop()
+        curr = queue.pop(0)
         
         
         for i,j in [(1,2),(1,-2),(2,1),(2,-1),(-1,2),(-1,-2),(-2,1),(-2,-1)]:
@@ -229,12 +229,12 @@ def find_shortest(source_x, source_y ,dest_x, dest_y):
                 new_node.y = new_y
                 new_node.dist = curr.dist + 1
                 
-                queue.insert(0,new_node)
+                queue.append(new_node)
 
 
 find_shortest(0,7,7,0)
 
- 
+ #Extend this to add path as well
 ##############################################
 
 
